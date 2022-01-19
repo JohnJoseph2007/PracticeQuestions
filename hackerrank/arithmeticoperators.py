@@ -42,9 +42,6 @@
 
 ## CODE HERE :
 
-from re import sub
-
-
 a = int(input())
 b = int(input())
 sum = a+b
@@ -54,4 +51,4 @@ print(sum)
 print(subtract)
 print(multiply)
 
-# Status: 
+# Status: Finished
