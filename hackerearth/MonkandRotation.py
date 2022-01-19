@@ -36,9 +36,11 @@ t=int(input("Enter number of arguments: "))
 listinput = []
 for i in range(t):
     n, k = input().split()
+    n=int(n)
+    k=int(k)
     listinput = list(map(int, input().strip().split(" ")))
     a = collections.deque(listinput)
     a.rotate(k)
-print(listinput)
+print(a)
 
 # Status: Unfinished
