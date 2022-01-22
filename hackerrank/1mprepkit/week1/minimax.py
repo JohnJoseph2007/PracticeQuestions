@@ -49,13 +49,13 @@ import re
 import sys
 
 def miniMaxSum(arr):
-    length = len(arr)
     sum = 0
+    storage = arr
     newarray = []
-    print(arr)
-    for i in range(length):
-        newarray = arr.pop(i)
+    for i in range(len(arr)):
         print(i)
+        newarray = storage.remove(storage[i])
+    print(newarray)
 
 
 arr = list(map(int, input().rstrip().split()))
