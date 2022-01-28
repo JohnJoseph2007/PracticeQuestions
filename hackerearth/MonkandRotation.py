@@ -1,6 +1,6 @@
 # Monk and Rotation
 # Link: https://www.hackerearth.com/practice/codemonk/
-# Monk loves to preform different operations on arrays, and so being the principal of Hackerearth School, he assigned a task to his new student Mishki. Mishki will be provided with an integer array A of size N and an integer K , where she needs to rotate the array in the right direction by K steps and then print the resultant array. As she is new to the school, please help her to complete the task.
+# Monk loves to perform different operations on arrays, and so being the principal of Hackerearth School, he assigned a task to his new student Mishki. Mishki will be provided with an integer array A of size N and an integer K , where she needs to rotate the array in the right direction by K steps and then print the resultant array. As she is new to the school, please help her to complete the task.
 
 # Video approach to solve this question: https://youtube.com/watch?v=mX38pWM--0M&list=PL1YS4hYJip07A-YteNUR8qTeA_wHQarDX&index=42
 
@@ -29,18 +29,14 @@
 
 ## CODE HERE :
 
-import collections
-
-
-t=int(input("Enter number of arguments: "))
-listinput = []
+t=int(input())
 for i in range(t):
-    n, k = input().split()
-    n=int(n)
-    k=int(k)
-    listinput = list(map(int, input().strip().split(" ")))
-    a = collections.deque(listinput)
-    a.rotate(k)
-print(a)
+    n, k = map(int, input().split())
+    listinput = list(map(int, input().split()))
+    x = k%n
+    print(*(listinput[n-x:] + listinput[:n-x]))
+    #listinput[n-x:] prints everything after index n-x
+    #listinput[:n-x] prints everything before index n-x
+    # print(*()) removes all metacharacters and converts 2d array into normal space-separated string
 
-# Status: Unfinished
+# Status: Finished
