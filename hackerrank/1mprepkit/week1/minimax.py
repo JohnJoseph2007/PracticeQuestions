@@ -40,25 +40,12 @@
 #   5. Sum everything except 5, the sum is 1+2+3+4=10
 # Hints: Beware of integer overflow! Use 64-bit Integer
 
+# 2 3 4 5 1
+
 ## CODE HERE :
 
-import math
-import os
-import random
-import re
-import sys
-
-def miniMaxSum(arr):
-    sum = 0
-    storage = arr
-    newarray = []
-    for i in range(len(arr)):
-        print(i)
-        newarray = storage.remove(storage[i])
-    print(newarray)
-
-
 arr = list(map(int, input().rstrip().split()))
-miniMaxSum(arr)
+sum = sum(arr)
+print(sum-max(arr), sum-min(arr))
 
-# Status: Unfinished
+# Status: Finished
