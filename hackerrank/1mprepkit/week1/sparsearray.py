@@ -100,8 +100,16 @@ import sys
 
 def matchingStrings(strings, queries):
     # Write your code here
-    for i in range(strings):
-        re.L
+    countarr = []
+    count = 0
+    for i in queries:
+        for j in strings:
+            if i==j:
+                count+=1
+        countarr.append(count)
+        count = 0
+    for i in countarr:
+        print(i)
 
 strings_count = int(input().strip())
 strings = []
@@ -115,4 +123,4 @@ for _ in range(queries_count):
     queries.append(queries_item)
 res = matchingStrings(strings, queries)
 
-# Status: Unfinished
+# Status: Finished

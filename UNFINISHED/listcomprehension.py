@@ -52,4 +52,4 @@ n = int(input())
 lista = [x for x in range(1, 11)]
 print(lista)
 
-# Status: Unfinished
+# Status: Unfinished (Normal Hackerrank)
