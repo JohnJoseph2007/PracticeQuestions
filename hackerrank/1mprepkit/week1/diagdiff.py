@@ -51,6 +51,9 @@
 
 ## CODE HERE :
 
+#!/bin/python3
+
+import math
 import os
 import random
 import re
@@ -65,13 +68,27 @@ import sys
 
 def diagonalDifference(arr):
     # Write your code here
-    for i in arr:
-        print(i)
+    lrsum = 0
+    rlsum = 0
+    for i in range(len(arr)):
+        lrsum+=arr[i][i]
+        rlsum+=arr[i][n-1-i]
+    return abs(lrsum-rlsum)
 
-n = int(input().strip())
-arr = []
-for _ in range(n):
-    arr.append(list(map(int, input().rstrip().split())))
-result = diagonalDifference(arr)
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-# Status: Unfinished
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+# Status: Finished
