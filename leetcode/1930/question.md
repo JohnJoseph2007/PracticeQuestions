@@ -41,5 +41,5 @@ For example, `"ace"` is a subsequence of `"abcde"`.
 
 **Constraints:**
 
-`3 <= s.length <= 105`  
+`3 <= s.length <= 10^5`  
 `s consists of only lowercase English letters.`
